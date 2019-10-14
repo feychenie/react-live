@@ -7,7 +7,7 @@ const errorBoundary = (Element, errorCallback) => {
     }
 
     render() {
-      return typeof Element === 'function' ? <Element /> : Element;
+      return typeof Element === 'function' ? <Element {...(this.props || {})} /> : Element;
     }
   };
 };
